@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Text to Binary Converter | Mark Nicholas Razon</title>
+	<!--- View Port --->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!--- Google Font --->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bakbak+One&family=Lobster&family=Montserrat:wght@100;200;300;400;600&family=Moo+Lah+Lah&family=Mukta:wght@800&family=Neonderthaw&family=Open+Sans:wght@300;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@100;200;300;400;600;700&family=Raleway:wght@100&family=Roboto:wght@100;300;400;500&family=Shizuru&family=Space+Mono&family=Spline+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!--- Main Files CSS--->
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<main>
+	<h1>Binary <span>Converter</span></h1>
+
+	<h2>This tool generates text to binary for educational purposes and reference.</h2>
+	<h3>Text to Binary:</h3>
+	<div class="input-box">
+		<textarea id="text" placeholder="Input text here..."></textarea>
+	    <textarea id="result" placeholder="The result will go here..." readonly=""></textarea>
+	</div>
+	<button onclick="convertBinary();">Convert</button>
+	<a href="index.html"><button class="no">Clear</button></a>
+	<h4>Made with 💚 by <strong>Mark Nicholas Razon</strong></h4>
+</main>
+<script type="text/javascript">
+	function convertBinary() {
+		var result = document.getElementById("result");
+		var input = document.getElementById("text").value;
+
+		result.value = "";
+		for (var i = 0; i < input.length; i++) {
+			result.value += input[i].charCodeAt(0).toString(2) + " ";
+		}
+	}
+</script>
+</body>
+</html>
